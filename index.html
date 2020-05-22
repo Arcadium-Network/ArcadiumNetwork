@@ -70,74 +70,91 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="jumbotron glassPanel rcAll">
+                            <div class="card-body glassPanel rcAll">
                                 <div class="row">
                                     <div class="col text-center">
                                         <h2 class="display-5 text-white">
-                                            <img src="assets/img/logo.png" width="30px" /><br />
-                                            <span class="user-token-balance">0.00</span> D1VS
+                                            <img src="assets/img/logo.png" width="30px" /> <span class="user-token-balance">0.00</span> D1VS
                                         </h2>
                                         <small class="text-muted"><i>YOUR BALANCE</i></small>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="jumbotron glassPanel rcAll">
+                                
                                 <div class="row">
                                     <div class="col text-center">
-                                        <h2 class="display-5 text-white">
-                                            <img src="assets/img/tron.png" width="30px" /><br />
-                                            <span id="user-trx-balance"></span> TRX
-                                        </h2>
+                                        <h6 class="display-5 text-white">
+                                            <img src="assets/img/tron.png" width="30px" /> <span id="user-trx-balance"></span> TRX
+                                        </h6>
                                         <small class="text-muted"><i>TRX VALUE</i></small>
                                     </div>
                                             
                                     <div class="col text-center">
-                                        <h2 class="display-5 text-white">
-                                            <img src="assets/img/dollar.png" width="30px" /><br />
-                                            <span id="user-usd-balance"></span> USD
-                                        </h2>
+                                        <h6 class="display-5 text-white">
+                                            <img src="assets/img/dollar.png" width="30px" /> <span id="user-usd-balance"></span> USD
+                                        </h6>
                                         <small class="text-muted"><i>DOLLAR VALUE</i></small>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col text-center">
-                            <button type="button" class="btn btn-block btn-lg btn-success btn-outline-dark rcAll text-white" data-toggle="modal" data-target="#buyModal">
-                                <i class="fas fa-dollar-sign"></i> Buy D1VS
-                            </button>
-                            <br />
-                        </div>
+                                <br />
+                                
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-block btn-sm btn-dark btn-outline-success rcAll text-white" data-toggle="modal" data-target="#buyModal">
+                                            <i class="fas fa-dollar-sign"></i> Buy D1VS
+                                        </button>
+                                    </div>
                                                 
-                        <div class="col text-center">
-                            <button class="btn btn-block btn-lg btn-danger btn-outline-dark rcAll text-white" data-toggle="modal" data-target="#sellModal">
-                                <i class="fas fa-dollar-sign"></i> Sell D1VS
-                            </button>
+                                    <div class="col text-center">
+                                        <button class="btn btn-block btn-sm btn-dark btn-outline-danger rcAll text-white" data-toggle="modal" data-target="#sellModal">
+                                            <i class="fas fa-dollar-sign"></i> Sell D1VS
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card-body glassPanel rcAll">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h2 class="display-5 text-white">
+                                            <img src="assets/img/logo.png" width="30px" /> <span class="user-reinvest">0.00</span> D1VS
+                                        </h2>
+                                        <small class="text-muted"><i>YOUR EARNINGS</i></small>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h6 class="display-5 text-white">
+                                            <img src="assets/img/tron.png" width="30px" /> <span class="user-dividends"></span> TRX
+                                        </h6>
+                                        <small class="text-muted"><i>TRX VALUE</i></small>
+                                    </div>
+                                            
+                                    <div class="col text-center">
+                                        <h6 class="display-5 text-white">
+                                            <img src="assets/img/dollar.png" width="30px" /> <span id="user-dividends-usd"></span> USD
+                                        </h6>
+                                        <small class="text-muted"><i>DOLLAR VALUE</i></small>
+                                    </div>
+                                </div>
+                                <br />
+                                
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-block btn-sm btn-dark btn-outline-info rcAll text-white btn-reinvest"><i class="fas fa-recycle"></i> Compound</button>
+                                    </div>
+                                                
+                                    <div class="col text-center">
+                                        <button class="btn btn-block btn-sm btn-dark btn-outline-warning rcAll text-white btn-withdraw"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
+                                    </div>
+                                </div>
+                            </div>
                             <br />
                         </div>
                     </div>
-                    
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <button type="button" class="btn btn-block btn-lg btn-info btn-outline-dark rcAll text-white btn-reinvest"><i class="fas fa-recycle"></i> Compound (+<span id="user-reinvest">0.00</span> D1VS ($<span id="user-dividends-usd">0.00</span> USD))</button><br />
-                        </div>
-                        
-                        <div class="col-md-4 text-center">
-                            <button class="btn btn-block btn-lg btn-warning btn-outline-dark rcAll text-white btn-withdraw"><i class="fas fa-hand-holding-usd"></i> Withdraw <span class="user-dividends">0.00000000</span> TRX</button><br />
-                        </div>
-                        
-                        <div class="col-md-4 text-center">
-                            <button class="btn btn-block btn-lg btn-primary btn-outline-dark rcAll text-white" data-toggle="modal" data-target="#guideModal">
-                                <i class="fas fa-info-circle text-white"></i> HOW TO PLAY
-                            </button>
-                        </div>
-                    </div>
-                    <br />
                     
                     <div class="row">
                         <div class="col text-center">
@@ -149,25 +166,25 @@
                 </div>
             </div>
             <br />
-                    
-            <footer class="py-5 px-5 glassPanel rcAll text-white">
-                <div class="row">
-                    <div class="col text-center">
-                        <b>The Fine Print</b>
-                        <small class="d-block mb-3 text-muted">
-                            This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
-                            Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
-                            Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
-                        </small>
-                    </div>
-                </div>
-            </footer>
             <br />
             <br />
             <br />
             <br />
             <br />
         </div>
+        
+        <footer class="py-5 px-5 glassPanel rcAll text-white">
+            <div class="row">
+                <div class="col text-center">
+                    <b>The Fine Print</b>
+                    <small class="d-block mb-3 text-muted">
+                        This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                        Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
+                        Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
+                    </small>
+                </div>
+            </div>
+        </footer>
         
         <!-- Modals -->
         <!-- Buy Modal -->

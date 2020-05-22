@@ -59,6 +59,8 @@ window.addEventListener("load",function() {
     $(".btn-withdraw").click(function(){p3TronContract.withdraw().send().then((result)=>{}).catch((error)=>{console.log(error)})});
 });
 
+
+
 function startLoop(){
     refreshData();
     setTimeout(startLoop,3000)

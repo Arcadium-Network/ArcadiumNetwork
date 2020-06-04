@@ -74,7 +74,7 @@ html, body {
 .rcLeft         {border-radius: 10px  0px  0px 10px;}
 .rcRight        {border-radius:  0px 10px 10px  0px;}
 
-.rcAll          {border-radius: 10px 10px 10px 10px;}
+.roundedCorners {border-radius: 10px 10px 10px 10px;}
 .rcNone         {border-radius:  0px  0px  0px  0px;}
 
 /* Glass FX */

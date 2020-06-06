@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="D1VS - Arcadium Network">
+        <meta name="author" content="Arcadium Network">
+        <title>Lobstars | Arcadium Network</title>
+        
+        <link rel="icon" type="image/png" href="assets/img/lobster.png">
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/arcadium-fx.css">
+        <link rel="stylesheet" href="assets/css/arcadium-fx-lobstars.css">
+        <link rel="stylesheet" href="assets/css/bubbles.css">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="wallpaper">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="divs.html">
+                            <b><i class="fas fa-chart-line text-danger"></i> D1VS</b>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="bttx.html">
+                            <b><i class="fas fa-dice-d6 text-warning"></i> BTTX</b>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="daily.html">
+                            <b><i class="fas fa-tint text-primary"></i> DAILY</b>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="flipper.html">
+                            <b><i class="fas fa-coins" style="color: #ffff00;"></i> FLIPPER</b>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="arcbank.html">
+                            <b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b>
+                        </a>
+                    </li>
+                </ul>
+              
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://discord.gg/ztNcbm3" target="_blank">
+                            <b><i class="fab fa-discord text-info"></i> DISCORD</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row" id="fomo">
+                <div class="col hatcheryMain">
+                    <div class="card glassPanel roundedCorners text-white" style="border: solid #ba9b18">
+                        <div class="card-body text-white" style="font-size: 12px;">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <br />
+                                    <h3 class="text-white">Grand Prize: <span id="bal">0.000</span> TRX</h3>
+                                    <span id="doc">0 : 00 : 0</span> Left until the End!<br />
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <img src="assets/img/lobster.png" width="50px"/><img src="assets/img/Lobstars-1.png" /><img src="assets/img/lobster.png" width="50px"/>
+                                    <button class="btn btn-block btn-sm btn-secondary btn-outline-warning roundedCorners text-white" onclick="stealPot()">Steal Pot for <span id="getPotCost">0.00</span> Eggs</button>
+                                </div>
+                                <div class="col text-center">
+                                    <br />
+                                    En-route To: <span id="winner"></span><br />
+                                    Whenever the pot is stolen, <b>one hour</b> is added to the time <i>(max 72 Hrs)</i>.<br />
+                                    <b><i>You win when the time runs out!</i></b>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="container">
+            <br />
+            <br />
+            
+            <!-- Hatchery -->
+            <div class="row" id="hatch">
+                <div class="col-md-8 hatcheryMain">
+                    <div class="card glassPanel roundedCorners" style="border: solid #0099ea;">
+                        <div class="card-header text-white">
+                            Your <i class="text-danger">Risk</i> of <b class="text-warning">Lobsters</b>
+                        </div>
+                        <div class="card-body text-white">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h3 class="text-white"><img src="assets/img/lobster.png" width="40px"/> <span id="getMyShrimp">0</span> Lobsters <small><i class="text-success">(+<span id="hour">0.00</span>/Hr)</i></small></h3>
+                                    <small class="text-muted"> </small>
+                                    <small class="text-muted"> Hatching has a 6 hour cooldown.<br />
+                                        Reduce cooldown by buying eggs!
+                                    </small>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <h3 class="text-white"><span id="getMyEggs">0.000</span> Eggs</h3>
+                                    <small class="text-muted">Hatch in <span id="hatchCooldown">0.000</span></small><br />
+                                    <small class="text-muted">Hatch in <span id="hatchCooldown2">0.000</span></small><br />
+                                    <small class="text-muted"><span id="lasthatch">?</span> until full hatchery</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-block btn-sm btn-warning roundedCorners" onclick="hatchEggs()">
+                                        Hatch <span id="hatchableShrimp">0</span> Eggs
+                                    </button>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <button class="btn btn-block btn-sm btn-danger roundedCorners" onclick="sellEggs()">
+                                        Sell for <span id="tronAmount">0.000</span> TRX
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-4 hatcheryMain">
+                    <div class="card glassPanel roundedCorners" style="border: solid #0099ea;">
+                        <div class="card-header text-white">
+                            Buy Eggs
+                        </div>
+                        <div class="card-body text-white">
+                            <div class="row">
+                            
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col text-center">
+                                    <label class="text-white"><b>TRX to Spend</b></label>
+                                    <input type="number" id="buyEggs" placeholder="0.001" class="form-control roundedCorners">
+                                    <p><span id="calculateEggBuySimple">0.000</span> eggs<br /></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-block btn-sm btn-success roundedCorners text-white" onclick="buy()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            
+            <!-- Eggs -->
+            <div class="row" id="eggs">
+                <div class="col-md-6 hatcheryMain text-center text-white">
+                    <input id="referralURL" class="form-control roundedCorners bg-dark text-info" value="" readonly="">
+                    Share your Referral Link to get 20% of users deposits!<br />
+                    <br />
+                </div>
+                <div class="col-md-2 hatcheryMain text-center">
+                    <button class="btn btn-block btn-md btn-info roundedCorners text-white copyButton" data-clipboard-target="#reflink"><i class="fas fa-users" aria-hidden="true"></i> Copy Link</button>
+                    <br>
+                </div>
+                <div class="col hatcheryMain text-center text-white">
+                    <div class="data" id="freedata"><button class="btn btn-block btn-md btn-primary roundedCorners" onclick="claimFreeEggs()">Start For Free</button></div>
+                    Claim <span id="getFreeEggs">0.000</span> Free Lobster!<br />
+                    You Have <span id="getMyEggs2">0.000</span> Eggs
+                </div>
+
+            </div>
+            
+            <!-- FOMO -->
+            
+            <br />
+            <hr />
+            <br />
+            
+            <div class="row">
+                <div class="col text-center">
+                    <small class="text-white">
+                        <i>Arcadium Network is not endorsed nor sponsored by any listings, media mention or otherwise.</i>
+                    </small>
+                </div>
+            </div>
+            <br />
+        </div>
+        
+        <div id="check"><h4 style="color:white">Checking Tronlink</h4></div>
+        
+        <footer class="py-5 px-5 glassPanel roundedCorners text-white">
+            <div class="row">
+                <div class="col text-center">
+                    <b>The Fine Print</b>
+                    <small class="d-block mb-3 text-muted">
+                        This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                        Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
+                        Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
+                    </small>
+                </div>
+            </div>
+        </footer>
+        <div class="row">
+            <div class="col text-right">
+                <small class="d-block mb-3 text-muted">
+                    Lobstars icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                </small>
+            </div>
+        </div>
+        <!-- Guide Modal -->
+        <div class="modal" id="guideModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">How to Play</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left">
+                                    <h3 class="text-white">1: <span class="text-success">Buy D1VS</span></h3>
+                                    <p class="text-white">
+                                        When you buy D1VS with TRX, a 10% fee is applied to your deposit. The same applies for every other player, on every deposit. This fee makes up part of the &quot;Dividends&quot; which are paid to those who already hold D1VS. As this goes, once you hold D1VS, you too will earn Dividends from other people depositing TRX!
+                                    </p>
+                                    <hr />
+                                    <h3 class="text-white">2: <span class="text-primary">Refer Others</span></h3>
+                                    <p class="text-white">
+                                        As soon as you have some D1VS, you can use your Referral Link to bring others into the game. When they use your link, you get a bonus to your Dividends! Just the same, they can also refer others with their link - so you should refer with your link fast, far and wide!
+                                    </p>
+                                    <hr />
+                                    <h3 class="text-white">3: <span class="text-warning">Compound D1VS</span></h3>
+                                    <p class="text-white">
+                                        Once you have a good bag of D1VS, you&apos;ll want to start Compounding your Dividends - that is, rolling them into more D1VS. This will have the effect of growing the size of your <i>&quot;portion of the pie&quot;</i>, thus earning more Dividends, faster!
+                                    </p>
+                                    <hr />
+                                    <h3 class="text-white">4: <span class="text-danger">Sell D1VS</span></h3>
+                                    <p class="text-white">
+                                        When it all falls apart on you - when you can&apos;t HODL your D1VS anymore, it&apos;s okay to <b>SELL</b> them! When you do, you will receive TRX to withdraw. The sale of D1VS is also subject to a 10% fee, which also makes up part of the &quot;Dividends&quot; paid to those who still hold D1VS!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    <ul class="bubble-boxes">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        
+        <script src="assets/js/clipboard.min.js"></script>
+        
+        <script src="assets/lib/lobstars.js"></script>
+        <script>
+            $("#acfomo").click(function() {
+                $("#fomo").toggle();
+                $("#eggs").hide();
+                $("#hatch").hide();
+                $("#aceggs").removeClass('active');
+                $("#achatch").removeClass('active');
+                $("#acfomo").addClass('active');
+            });
+            
+            $("#aceggs").click(function() {
+                $("#fomo").hide();
+                $("#eggs").show();
+                $("#hatch").hide();
+                $("#acfomo").removeClass('active');
+                $("#achatch").removeClass('active');
+                $("#aceggs").addClass('active');
+            });
+            
+            $("#achatch").click(function() {
+                $("#fomo").hide();
+                $("#eggs").hide();
+                $("#hatch").show();
+                $("#acfomo").removeClass('active');
+                $("#achatch").addClass('active');
+                $("#aceggs").removeClass('active');
+            });
+        </script>
+    </body>
+</html>

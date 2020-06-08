@@ -124,8 +124,8 @@ function checkValidBuy(amount) {
     $('#buyTokensBtn').text('INVALID NUMBER')
     validBuy = false
   }
-  if (amount < 1000) {
-    $('#buyTokensBtn').text('1000 TRX MINIMUM')
+  if (amount < 100) {
+    $('#buyTokensBtn').text('100 TRX MINIMUM')
     validBuy = false
   }
   if (amount > userTrx) {
@@ -160,8 +160,8 @@ function checkValidSell(amount) {
     $('#sellTokensBtn').text('INVALID NUMBER')
     validSell = false
   }
-  if (amount < 10) {
-    $('#sellTokensBtn').text('$10 MINIMUM')
+  if (amount < 2) {
+    $('#sellTokensBtn').text('$2 USDJ MINIMUM')
     validSell = false
   }
   if (amount > userTokens) {

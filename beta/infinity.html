@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="D1VS - Arcadium Network">
+        <meta name="author" content="Arcadium Network">
+        <title>Home | Arcadium Network</title>
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/arcadium-fx.css">
+        <link rel="stylesheet" href="assets/css/arcadium-colours.css">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="wallpaper">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="divs.html">
+                            <b><i class="fas fa-chart-line text-danger"></i> D1VS</b>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="daily.html">
+                            <b><i class="fas fa-tint text-primary"></i> DAILY</b>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="infinity.html">
+                            <b><i class="fas fa-infinity text-success"></i> INFINITY</b>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="arcbank.html">
+                            <b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b>
+                        </a>
+                    </li>
+                </ul>
+              
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://twitter.com/ArcadiumTRX" target="_blank">
+                            <b><i class="fab fa-twitter text-primary"></i> TWITTER</b>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://t.me/ArcadiumNetwork" target="_blank">
+                            <b><i class="fab fa-telegram text-primary"></i> TELEGRAM</b>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://discord.gg/ztNcbm3" target="_blank">
+                            <b><i class="fab fa-discord text-primary"></i> DISCORD</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="content" class="container">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="container">
+                    <div class="row jumbotron glassPanel blueBorder roundedCorners">
+                        <div class="col text-center">
+                            <h1 class="text-white"><img src="assets/img/infinity.svg" width="60px" /> INFINITY</h1>
+                            <p class="text-white">
+                                <i>
+                                    A Game of INFINITE <span class="text-success">BUY</span> and <span class="text-danger">SELL</span> Trade!
+                                </i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col text-center">
+                    <a id="getfreeshrimp" class="btn arcRed text-white btn-block roundedCorners invis" onclick="getFreeShrimp(displayTransactionMessage)" role="button">Get Free INFINITY!</a><br />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card glassPanel roundedCorners greenBorder">
+                        <div class="card-header text-white">My INFINITY</div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h2 class="text-white"><img src="assets/img/infinity.svg" width="30px" /> <span class="numshrimp">0</span></h2>
+                                        <p class="text-warning">Producing <span id="production">0</span> Cr/Hr</p>
+                                    </div>
+                                    
+                                    <di class="col text-center">
+                                        <h2 class="text-white"><span class="numeggs text-success">0</span> Cr</h2>
+                                        <p class="text-white"><i>(<span id="timeuntilfull">?</span> until Complete)</i></p>
+                                    </di>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a class="btn btn-md btn-block arcGreen text-dark roundedCorners" onclick="hatchEggs1(displayTransactionMessage)" role="button">
+                                        Buy <span id="mintableTRC"></span> ARCX
+                                    </a>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <a class="btn btn-md btn-block arcYellow text-dark roundedCorners" onclick="hatchEggs1(displayTransactionMessage)" role="button">
+                                        Compound + <span id="hatchshrimpquantity">?</span>
+                                    </a>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <a class="btn btn-md btn-block arcRed text-white roundedCorners" onclick="sellEggs(displayTransactionMessage)"  role="button">
+                                        Sell For <span id="sellprice">?</span> TRX
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+ 
+                <div class="col-md-6">
+                    <div class="card glassPanel redBorder roundedCorners">
+                        <div class="card-header text-white">Buy INFINITY</div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h2 class="text-white"><span id="eggstobuy" class="text-warning">?</span> INFINITY</h2>
+                                        <input class="form-control roundedCorners" type="number" onchange="updateBuyPrice()" step="1" value="1000" id="ethtospend">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a class="btn arcGreen text-dark btn-block roundedCorners" onclick="buyEggs2()"  role="button">Buy</a>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <a onclick="copyRef()" id="playerreflink" class="btn btn-block arcBlue text-white roundedCorners">?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <div class="card-header blueBorder roundedCorners"><span class="text-danger" id="sellsforexample">?</span></div>
+                    <br />
+                </div>
+                
+                <div class="col text-center">
+                    <div class="card-header blueBorder roundedCorners"><span class="text-white" id="contractBal">Contract Balance: ?</span></div>
+                    <br />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col text-center">
+                    <!-- Disappearing Stuff Goes Here -->
+                    <p class="lead"></p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col text-center">
+                    <div class="card glassPanel roundedCorners">
+                        <div class="card-header text-white">Earn TRX on INFINITY!</div>
+                        <div class="card-body text-white">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <p class="text-white">
+                                            INFINITY is an idle game on TRON, featuring an automated market enabling continuous instant <span class="text-success">buy</span> and <span class="text-danger">sell</span> trade!<br />
+                                            Driven by supply and demand, the price automatically adjusts as players trade.<br />
+                                            <br />
+                                            The more INFINITY you have, the more Cr you generate.<br />
+                                            Convert Cr to INFINITY to multiply your generation, or sell them to the market for TRON!
+                                        </p>
+                                        <p class="text-white">
+                                            Earn <b>10%</b> of all Cr converted by anyone who starts playing using your link!
+                                        </p>
+                                        <input style="display:none;" type="text" value="Hello Worldfdgerh" id="copytextthing">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            
+            <hr />
+            <br />
+
+            <div class="row">
+                <div class="col text-center">
+                    <small class="text-white">
+                        <i>Arcadium Network is not endorsed nor sponsored by any listings, media mention or otherwise.</i>
+                    </small>
+                </div>
+            </div>
+            <br />
+        </div>
+        
+        <footer class="py-5 px-5 glassPanel roundedCorners text-white">
+            <div class="row">
+                <div class="col text-center">
+                    <b>The Fine Print</b>
+                    <small class="d-block mb-3 text-muted">
+                        This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                        Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
+                        Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
+                    </small>
+                </div>
+            </div>
+        </footer>
+
+        <div id="myModal" class="modal"><div class="modal-content"><div id="modal-internal"></div></div></div>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        
+        <script src="assets/js/clipboard.min.js"></script>
+        
+        <script src="assets/lib/infinityface.js"></script>
+        <script src="assets/lib/infinitymain.js"></script>
+        
+        <script>
+            main()
+        </script>
+    </body>
+</html>

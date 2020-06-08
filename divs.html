@@ -7,85 +7,76 @@
         <meta name="author" content="Arcadium Network">
         <title>D1VS | Arcadium Network</title>
 
-        <link rel="icon" type="image/png" href="assets/img/logo.png">
-        
         <!-- Core CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/arcadium-fx.css">
+        <link rel="stylesheet" href="assets/css/arcadium-colours.css">
 
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
 
-    <body class="wallpaper">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+    <body class="is-preload wallpaper">
+        <div class="d-flex" id="wrapper">
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="bttx.html">
-                            <b><i class="fas fa-dice-d6 text-warning"></i> BTTX</b>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="daily.html">
-                            <b><i class="fas fa-tint text-primary"></i> DAILY</b>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="flipper.html">
-                            <b><i class="fas fa-coins" style="color: #ffff00;"></i> FLIPPER</b>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="arcbank.html">
-                            <b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b>
-                        </a>
-                    </li>
-                </ul>
+            <!-- Sidebar -->
+            <div class="glassPanel border-light" id="sidebar-wrapper">
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="sidebar-heading text-white">
+                    <small class="text-muted">Wallet Balance</small>
+                    <h5 class="text-white"><span id="user-wallet-balance"></span> TRX</h5>
+                    <button type="button" class="btn btn-block btn-sm btn-primary roundedCorners" onClick="window.location.reload();">Refresh</button>
+                </div>
+                <b class="text-white"> // DAPPS</b>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="divs.html"><b><i class="fas fa-chart-line text-danger"></i> D1VS</b></a>
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="bttx.html"><b><i class="fas fa-dice-d6 text-warning"></i> BTTX</b></a>
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="daily.html"><b><i class="fas fa-tint text-primary"></i> DAILY</b></a>
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="arcbank.html"><b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b></a>
+                </div>
+                <br />
+                <b class="text-white"> // RESOURCES</b>
+                <div class="list-group list-group-flush">
+                    <a href="https://github.com/ArcadiumNetwork" target="_blank" class="list-group-item list-group-item-action glassButton text-white"><i class="fab fa-github text-info"></i>  GitHub</a>
+                </div>
+                <br />
             </div>
+            <!-- /#sidebar-wrapper -->
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://twitter.com/ArcadiumTRX" target="_blank">
-                            <b><i class="fab fa-twitter text-primary"></i> TWITTER</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://t.me/ArcadiumNetwork" target="_blank">
-                            <b><i class="fab fa-telegram text-primary"></i> TELEGRAM</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://discord.gg/ztNcbm3" target="_blank">
-                            <b><i class="fab fa-discord text-primary"></i> DISCORD</b>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-                        
-            <div class="nav-item mr-auto">
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <!-- NAVBAR -->
+                <nav class="navbar navbar-expand-lg navbar-dark border-light fixed-top" style="background-color: #000;">
+                    <div class="navbar-brand text-white"><a href="index.html"><img src="assets/img/logo.png" width="40px" /></a></div>
+                    <div class="nav-item mr-auto">
                         <span class="text-white"><b>Vault: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX&nbsp;</span></b>
                         </span>
                         
                         <span class="text-white"><b>Tokens: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
                         </span>
                     </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-        
-        <div id="content" class="container">
-            <br />
-            <br />
-            <br />
-            <br />
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
+                        </ul>
+                    </div>
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+                
+                <!-- MAIN CONTAINER -->
+                <div id="content" class="container">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
             <div class="row">
                 <div class="container">
                     <div class="row jumbotron glassPanel roundedCorners" style="border: solid #868e96;">
@@ -214,27 +205,36 @@
                 </div>
             </div>
             <br />
+                </div>
+                
+                <button class="floatingButton" id="menu-toggle"><img src="assets/img/logo.png" width="50px" /></button>
+                
+                <footer class="py-5 px-5 glassPanel roundedCorners text-white">
+                    <div class="row">
+                        <div class="col text-center">
+                    
+                            <b>The Fine Print</b>
+                            <small class="d-block mb-3 text-muted">
+                                This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                                Only invest with BTT which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
+                                Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
+                            </small>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /#page-content-wrapper -->
+
         </div>
         
-        <footer class="py-5 px-5 glassPanel roundedCorners text-white">
-            <div class="row">
-                <div class="col text-center">
-                    <b>The Fine Print</b>
-                    <small class="d-block mb-3 text-muted">
-                        This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
-                        Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
-                        Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
-                    </small>
-                </div>
-            </div>
-        </footer>
-        <div class="row">
-                <div class="col text-right">
-                    <small class="d-block mb-3 text-muted">
-                        Lobstars icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                    </small>
-                </div>
-            </div>
+        <!-- Bottom Nav -->
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
+            <ul class="navbar-nav mr-auto ml-auto">
+                <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+                <coingecko-coin-price-marquee-widget  coin-ids="tron,bittorrent-2,just-stablecoin" currency="usd" background-color="#000000" locale="en" font-color="#ffffff"></coingecko-coin-price-marquee-widget>
+            </ul>
+        </nav>
+        
         <!-- Modals -->
         <div class="modal" id="faqModal">
             <div class="modal-dialog">
@@ -405,7 +405,6 @@
                 </div>
             </div>
         </div>
-        
         <!-- Sell Modal -->
         <div class="modal" id="sellModal">
             <div class="modal-dialog">
@@ -454,7 +453,6 @@
                 </div>
             </div>
         </div>
-        
         <!-- Referral Link Modal -->
         <div class="modal" id="referralsModal">
             <div class="modal-dialog">
@@ -489,7 +487,6 @@
                 </div>
             </div>
         </div>
-        
         <!-- Guide Modal -->
         <div class="modal" id="guideModal">
             <div class="modal-dialog">
@@ -601,6 +598,7 @@
                 </div>
             </div>
         </div>
+        
         
         <!-- Bootstrap core JavaScript -->
         <script src="assets/js/jquery.min.js"></script>

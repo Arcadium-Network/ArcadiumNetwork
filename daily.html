@@ -17,96 +17,66 @@
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
 
-    <body class="wallpaper">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+    <body class="is-preload wallpaper">
+        <div class="d-flex" id="wrapper">
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="divs.html">
-                            <b><i class="fas fa-chart-line text-danger"></i> D1VS</b>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="bttx.html">
-                            <b><i class="fas fa-dice-d6 text-warning"></i> BTTX</b>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="flipper.html">
-                            <b><i class="fas fa-coins" style="color: #ffff00;"></i> FLIPPER</b>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="arcbank.html">
-                            <b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b>
-                        </a>
-                    </li>
-                </ul>
+            <!-- Sidebar -->
+            <div class="glassPanel border-light" id="sidebar-wrapper">
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="sidebar-heading text-white">
+                    <small class="text-muted">Your Investment</small>
+                    <h5 class="text-white"><span id="your-invest" class="text-danger">0</span> TRX</h5>
+                    <button type="button" class="btn btn-block btn-sm btn-primary roundedCorners" onClick="window.location.reload();">Refresh</button>
+                </div>
+                <b class="text-white"> // DAPPS</b>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="divs.html"><b><i class="fas fa-chart-line text-danger"></i> D1VS</b></a>
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="bttx.html"><b><i class="fas fa-dice-d6 text-warning"></i> BTTX</b></a>
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="daily.html"><b><i class="fas fa-tint text-primary"></i> DAILY</b></a>
+                    <a class="list-group-item list-group-item-action glassButton text-white" href="arcbank.html"><b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b></a>
+                </div>
+                <br />
+                <b class="text-white"> // RESOURCES</b>
+                <div class="list-group list-group-flush">
+                    <a href="https://github.com/Arcadium-Network" target="_blank" class="list-group-item list-group-item-action glassButton text-white"><i class="fab fa-github text-info"></i>  GitHub</a>
+                </div>
+                <br />
             </div>
+            <!-- /#sidebar-wrapper -->
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://twitter.com/ArcadiumTRX" target="_blank">
-                            <b><i class="fab fa-twitter text-primary"></i> TWITTER</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://t.me/ArcadiumNetwork" target="_blank">
-                            <b><i class="fab fa-telegram text-primary"></i> TELEGRAM</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://discord.gg/ztNcbm3" target="_blank">
-                            <b><i class="fab fa-discord text-primary"></i> DISCORD</b>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-                        
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-        
-        <div id="content" class="container">
-            <br />
-            <br />
-            <br />
-            <br />
-            <div class="row">
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <!-- NAVBAR -->
+                <nav class="navbar navbar-expand-lg navbar-dark border-light fixed-top" style="background-color: #000;">
+                    <div class="navbar-brand text-white"><a href="index.html"><img src="assets/img/logo.png" width="40px" /></a></div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <br /><br /><br /><br />
+                
+                <!-- MAIN CONTAINER -->
                 <div class="container">
                     <div class="row jumbotron glassPanel roundedCorners" style="border: solid #0099ea;">
                         <div class="col text-center">
                             <h1 class="text-white"><i class="fas fa-tint text-primary"></i> Arcadium Daily</h1>
-                            <p class="text-muted"><i>3&#37; every 24 hours, till it all runs out!</i></p>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card glassPanel roundedCorners">
-                                <div class="card-header  text-white text-center">
-                                    <b>Your total invested: <span id="your-invest" class="text-danger">0</span> TRX</b><br />
-                                    <b>Estimated Earn Rate: <span id="your-earn-rate" class="text-success">0</span> TRX / 24 Hrs</b><br />
-                                </div>
-                            </div>
-                            <br />
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="card glassPanel roundedCorners">
-                                <div class="card-header  text-white text-center">
-                                    <b>Your Referrer: <span id="your-inviter">n/a</span></b><br />
-                                    <i>Earn 5&#37; of TRX deposited with your Refferal Link!</i>
-                                </div>
-                            </div>
-                            <br />
+                            <p class="text-white">
+                                <i>
+                                    <span id="your-earn-rate" class="text-success">0</span> TRX (3&#37;) every 24 hours, till it all runs out!
+                                </i>
+                                <br />
+                                <b>Referrer: <span id="your-inviter">n/a</span></b>
+                            </p>
                         </div>
                     </div>
                     
@@ -173,27 +143,26 @@
                         </div>
                     </div>
                     
-                </div>
-            </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <a class="btn btn-block btn-dark btn-md roundedCorners text-white" href="https://tronscan.org/#/contract/THQoRfWFa4xRjbWPQjK6wsekS1E9iEQVrg/code" target="_blank">View Contract on TronScan</a>
+                        </div>
+                    </div>
+                    <br />
             
-            <div class="row">
-                <div class="col text-center">
-                    <a class="btn btn-block btn-dark btn-md roundedCorners text-white" href="https://tronscan.org/#/contract/THQoRfWFa4xRjbWPQjK6wsekS1E9iEQVrg/code" target="_blank">View Contract on TronScan</a>
+                    <div class="row">
+                        <div class="col text-center">
+                            <small class="text-white">
+                                <i>Arcadium DAILY is not endorsed nor sponsored by any listings, media mention or otherwise.</i>
+                            </small>
+                        </div>
+                    </div>
+                    <br />
                 </div>
-            </div>
-            <br />
-            
-            <div class="row">
-                <div class="col text-center">
-                    <small class="text-white">
-                        <i>Arcadium DAILY is not endorsed nor sponsored by any listings, media mention or otherwise.</i>
-                    </small>
-                </div>
-            </div>
-            <br />
-        </div>
-        
-        <footer class="py-5 px-5 glassPanel roundedCorners text-white">
+                
+                <button class="floatingButton" id="menu-toggle"><img src="assets/img/logo.png" width="50px" /></button>
+                
+                <footer class="py-5 px-5 glassPanel roundedCorners text-white">
             <div class="row">
                 <div class="col text-center">
                     <b>The Fine Print</b>
@@ -205,6 +174,18 @@
                 </div>
             </div>
         </footer>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        
+        <!-- Bottom Nav -->
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
+            <ul class="navbar-nav mr-auto ml-auto">
+                <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+                <coingecko-coin-price-marquee-widget  coin-ids="tron,bittorrent-2,just-stablecoin" currency="usd" background-color="#000000" locale="en" font-color="#ffffff"></coingecko-coin-price-marquee-widget>
+            </ul>
+        </nav>
         
         <!-- Modals -->
         <!-- Referral Link Modal -->
@@ -243,6 +224,42 @@
             </div>
         </div>
         
+        <!-- Modals -->
+        <!-- Referral Link Modal -->
+        <div class="modal" id="referralsModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Referral Link</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h3 class="text-white">Here&apos;s your Link</h3>
+                                    <input id="reflink" class="form-control roundedCorners bg-dark text-info" value="" readonly="" /><br />
+                                    <button data-clipboard-target="#reflink" class="btn btn-block btn-sm btn-warning roundedCorners copyButton">Copy Referral Link</button>
+                                    <small class="text-white">When others use it to buy in, you get a bonus of 5&#37;! You must have at least 1 TRX invested for your link to be active!</small>
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <!-- Guide Modal -->
         <div class="modal" id="guideModal">
             <div class="modal-dialog">
